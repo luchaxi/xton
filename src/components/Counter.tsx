@@ -33,10 +33,10 @@ export function Counter() {
             disabled={!connected}
             className={`Button ${connected ? "Active" : "Disabled"}`}
             onClick={() => {
-              navigator.clipboard.writeText('Copy this text to clipboard')
+              sendIncrement();
             }}
           >
-            Copy
+            Increment
           </Button>
         </FlexBoxCol>
       </Card>

@@ -38,7 +38,7 @@ export const Button = styled.button`
 export const Ellipsis = styled.div`
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
+  white-space: normal;
 `;
 
 export const Input = styled("input")`
