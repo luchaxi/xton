@@ -21,10 +21,9 @@ export function Counter() {
       <Card>
         <FlexBoxCol>
           <h3>Counter</h3>
-
           <FlexBoxRow>
             <b>Address</b>
-            <div>{address}</div>
+            <Ellipsis>{address}</Ellipsis>
           </FlexBoxRow>
           <FlexBoxRow>
             <b>Value</b>
@@ -32,9 +31,11 @@ export function Counter() {
           </FlexBoxRow>
           <Button
             disabled={!connected}
-            className={`Button ${connected ? "Active" : "Disabled"}`}
+            className={`Button ${connected ? "Copy" : "Disabled"}`}
             onClick={() => {
-              sendIncrement();
+              if (typeof address === "string") {
+                navigator.clipboard.writeText(address)
+              }
             }}
           >
             Increment
