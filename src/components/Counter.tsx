@@ -20,8 +20,18 @@ export function Counter() {
 
       <Card>
         <FlexBoxCol>
-          <h3>Counter</h3>
+          <h3>userAddress</h3>
           <div>{userFriendlyAddress}</div>
+          <Button
+              disabled={!connected}
+              className={`Button ${connected ? "Active" : "Disabled"}`}
+              onClick={() => {
+                window.navigator.clipboard.writeText(userFriendlyAddress)
+              }}
+              >
+            Copy
+          </Button>
+          <h3>Counter</h3>
           <FlexBoxRow>
             <b>Address</b>
             <Ellipsis>{address}</Ellipsis>
