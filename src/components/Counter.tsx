@@ -22,7 +22,6 @@ export function Counter() {
         <FlexBoxCol>
           <h3>Counter</h3>
           <FlexBoxRow>
-            <b>Address</b>
             <div>{address}</div>
             <Button
                 disabled={!connected}
