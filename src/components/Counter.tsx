@@ -23,7 +23,16 @@ export function Counter() {
           <h3>Counter</h3>
           <FlexBoxRow>
             <b>Address</b>
-            <Ellipsis>{address}</Ellipsis>
+            <div>{address}</div>
+            <Button
+                disabled={!connected}
+                className={`Button ${connected ? "Active" : "Disabled"}`}
+                onClick={() => {
+                  navigator.clipboard.writeText('Copy this text to clipboard')
+                }}
+            >
+              Copy Address
+            </Button>
           </FlexBoxRow>
           <FlexBoxRow>
             <b>Value</b>
