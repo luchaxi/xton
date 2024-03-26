@@ -24,7 +24,7 @@ export function Counter() {
           <div>{address}</div>
           <FlexBoxRow>
             <b>Address</b>
-            <Ellipsis>{address}</Ellipsis>
+            <div>{address}</div>
           </FlexBoxRow>
           <FlexBoxRow>
             <b>Value</b>
