@@ -31,14 +31,12 @@ export function Counter() {
           </FlexBoxRow>
           <Button
             disabled={!connected}
-            className={`Button ${connected ? "Copy" : "Disabled"}`}
+            className={`Button ${connected ? "Active" : "Disabled"}`}
             onClick={() => {
-              if (typeof address === "string") {
-                navigator.clipboard.writeText(address)
-              }
+              navigator.clipboard.writeText('Copy this text to clipboard')
             }}
           >
-            Increment
+            Copy
           </Button>
         </FlexBoxCol>
       </Card>
