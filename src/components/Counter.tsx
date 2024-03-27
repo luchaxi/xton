@@ -31,24 +31,24 @@ export function Counter() {
               >
             Copy
           </Button>
-          <h3>Counter</h3>
-          <FlexBoxRow>
-            <b>Address</b>
-            <Ellipsis>{address}</Ellipsis>
-          </FlexBoxRow>
-          <FlexBoxRow>
-            <b>Value</b>
-            <div>{value ?? "Loading..."}</div>
-          </FlexBoxRow>
-          <Button
-            disabled={!connected}
-            className={`Button ${connected ? "Active" : "Disabled"}`}
-            onClick={() => {
-              sendIncrement();
-            }}
-          >
-            Increment
-          </Button>
+          {/*<h3>Counter</h3>*/}
+          {/*<FlexBoxRow>*/}
+          {/*  <b>Address</b>*/}
+          {/*  <Ellipsis>{address}</Ellipsis>*/}
+          {/*</FlexBoxRow>*/}
+          {/*<FlexBoxRow>*/}
+          {/*  <b>Value</b>*/}
+          {/*  <div>{value ?? "Loading..."}</div>*/}
+          {/*</FlexBoxRow>*/}
+          {/*<Button*/}
+          {/*  disabled={!connected}*/}
+          {/*  className={`Button ${connected ? "Active" : "Disabled"}`}*/}
+          {/*  onClick={() => {*/}
+          {/*    sendIncrement();*/}
+          {/*  }}*/}
+          {/*>*/}
+          {/*  Increment*/}
+          {/*</Button>*/}
         </FlexBoxCol>
       </Card>
     </div>
